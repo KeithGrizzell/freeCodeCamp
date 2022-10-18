@@ -1,0 +1,144 @@
+html, body {
+  color: #010;
+  background-color: #aaf;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  font-size: 1.17rem;
+  font-weight: bold;
+  color: #a00;
+  padding: 0.5rem 0 0;
+  margin: 0 0 1rem;
+  border-top: 2px solid;
+}
+
+header, a.nav-link {
+  font-family: Tahoma, sans-serif;
+}
+
+#main-doc {
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: #ffddee;
+  padding: 0 1rem 1px;
+  margin: 0;
+}
+
+section {
+  padding-top: 1.5rem;
+  margin: 0;
+}
+
+#navbar {
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: #ddd;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+nav header {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  border-top: none;
+}
+
+#navbar-header br {
+  display: none;
+}
+
+#navbar-header::before {
+  content: "Trigonometric "
+}
+
+a.nav-link {
+  display: block;
+  color: #000;
+  background-color: #ffc;
+  text-decoration: none;
+  margin: 4px;
+}
+
+a.nav-link:hover {
+  background-color: #cc9;
+}
+
+/* The next adjustment is to compensate for monospace fonts that don't render the degree symbol in a monospaced way. */
+span.char {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  color: #00c;
+  font-weight: bold;
+  display: inline-block;
+}
+
+code.input, code.output {
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  overflow-x: auto;
+  white-space: pre;
+  font-weight: bold;
+  max-width: 80ch;
+}
+
+code.input {
+  background-color: #fff;
+  color: #00c;
+}
+
+code.output {
+  background-color: #000;
+  color: #ddd;
+}
+
+li {
+  display: contents;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 400px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+  }
+  #main-doc {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: calc(100vw - 100px - 2rem);
+  }
+  #navbar-header br {
+    display: initial;
+  }
+
+  #navbar-header::before {
+    content: "Trig."
+  }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Trigonometric Functions in Python</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header id="navbar-header"> <br />Functions <br />in Python</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Sine">Sine</a>
+      <a class="nav-link" href="#Cosine">Cosine</a>
+      <a class="nav-link" href="#Tangent">Tangent</a>
+      <a class="nav-link" href="#Secant">Secant</a>
+      <a class="nav-link" href="#Cosecant">Cosecant</a>
+      <a class="nav-link" href="#Cotangent">Cotangent</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>This document discusses the calculation of the six trigonometric functions in Python 3. The accompanying code samples are designed to run in Python 3.7 or greater.</p>
+          <p>For a mathematical explanation of the functions, see <a href="https://en.wikipedia.org/wiki/Trigonometric_functions">Wikipedia's entry</a>.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Sine">
+        <header>Sine</header>
+        <article>
+          <p>In mathematics, the sine of the variable <var class="math">x</var> would be written as <span class="math">sin(<var>x</var>)</span>. It is written the same whether <var class="math">x</var> is expressed in degrees or in radians.</p>
+          <p>In Python, the function can be imported from the <code>math</code> package (which just uses the underlying C implementation) and is similarly named <code>sin</code>, but <em>the function argument must always be expressed in radians</em>. To use degrees you can first convert the degree measure into radians using the <code>math</code> package function <code>radians</code>. The following example computes and displays various sine values, and includes some degrees to radians conversions.</p>
+<p>Input:</p>
+<code class="input">from math import sin, radians
+
+x = 0.5
+print(f'sin({x}) ≈ {sin(x)}')
+
+for degree_measure in [0, 30, 45, 60, 90]:
+    radian_measure = radians(degree_measure)
+    print(f'sin({degree_measure:>2}<span class="char">°</span>) '
+          f'≈ sin({radian_measure:.8f}) '
+          f'≈ {sin(radian_measure):.8f}')
+</code>
+<p>Output:
+          <code class="output">sin(0.5) ≈ 0.479425538604203
+sin( 0<span class="char">°</span>) ≈ sin(0.00000000) ≈ 0.00000000
+sin(30<span class="char">°</span>) ≈ sin(0.52359878) ≈ 0.50000000
+sin(45<span class="char">°</span>) ≈ sin(0.78539816) ≈ 0.70710678
+sin(60<span class="char">°</span>) ≈ sin(1.04719755) ≈ 0.86602540
+sin(90<span class="char">°</span>) ≈ sin(1.57079633) ≈ 1.00000000
+</code>
+          <ul>
+            <li>You can also import the entire math library with the statement <code>import math</code> and then call the same functions with <code>math.sin</code> and <code>math.radians</code>.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Cosine">
+        <header>Cosine</header>
+        <article>
+          <p>In mathematics, the cosine of the variable <var class="math">x</var> would be written as <span class="math">cos(<var>x</var>)</span>. It is written the same whether <var class="math">x</var> is expressed in degrees or in radians.</p>
+          <p>In Python, the function can be imported from the <code>math</code> package (which just uses the underlying C implementation) and is similarly named <code>cos</code>, but <em>the function argument must always be expressed in radians</em>. To use degrees you can first convert the degree measure into radians using the <code>math</code> package function <code>radians</code>. The following example computes and displays various cosine values, and includes some degrees to radians conversions.</p>
+<p>Input:</p>
+<code class="input">from math import cos, radians
+
+x = 0.5
+print(f'cos({x}) ≈ {cos(x)}')
+
+for degree_measure in [0, 30, 45, 60, 90]:
+    radian_measure = radians(degree_measure)
+    print(f'cos({degree_measure:>2}<span class="char">°</span>) '
+          f'≈ cos({radian_measure:.8f}) '
+          f'≈ {cos(radian_measure):.8f}')
+</code>
+<p>Output:
+          <code class="output">cos(0.5) ≈ 0.8775825618903728
+cos( 0<span class="char">°</span>) ≈ cos(0.00000000) ≈ 1.00000000
+cos(30<span class="char">°</span>) ≈ cos(0.52359878) ≈ 0.86602540
+cos(45<span class="char">°</span>) ≈ cos(0.78539816) ≈ 0.70710678
+cos(60<span class="char">°</span>) ≈ cos(1.04719755) ≈ 0.50000000
+cos(90<span class="char">°</span>) ≈ cos(1.57079633) ≈ 0.00000000
+</code>
+          <ul>
+            <li>You can also import the entire math library with the statement <code>import math</code> and then call the same functions with <code>math.cos</code> and <code>math.radians</code>.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Tangent">
+        <header>Tangent</header>
+        <article>
+          <p>In mathematics, the tangent of the variable <var class="math">x</var> would be written as <span class="math">tan(<var>x</var>)</span>. It is written the same whether <var class="math">x</var> is expressed in degrees or in radians.</p>
+          <p>In Python, the function can be imported from the <code>math</code> package (which just uses the underlying C implementation) and is similarly named <code>tan</code>, but <em>the function argument must always be expressed in radians</em>. To use degrees you can first convert the degree measure into radians using the <code>math</code> package function <code>radians</code>. The following example computes and displays various tangent values, and includes some degrees to radians conversions.</p>
+<p>Input:</p>
+<code class="input">from math import tan, radians
+
+x = 0.5
+print(f'tan({x}) ≈ {tan(x)}')
+
+for degree_measure in [0, 30, 45, 60, 90]:
+    radian_measure = radians(degree_measure)
+    print(f'tan({degree_measure:>2}<span class="char">°</span>) '
+          f'≈ tan({radian_measure:.8f}) '
+          f'≈ {tan(radian_measure):.8f}')
+</code>
+<p>Output:
+          <code class="output">tan(0.5) ≈ 0.5463024898437905
+tan( 0<span class="char">°</span>) ≈ tan(0.00000000) ≈ 0.00000000
+tan(30<span class="char">°</span>) ≈ tan(0.52359878) ≈ 0.57735027
+tan(45<span class="char">°</span>) ≈ tan(0.78539816) ≈ 1.00000000
+tan(60<span class="char">°</span>) ≈ tan(1.04719755) ≈ 1.73205081
+tan(90<span class="char">°</span>) ≈ tan(1.57079633) ≈ 16331239353195370.00000000
+</code>
+          <p>Unlike sine and cosine, the values of the tangent function are not bounded. You can see the unintended effect of this in the last line of output above. (Also, mathematically <span class="math">tan(90<span class="char">°</span>)</span> is undefined, but using a radian approximation for the angle we see instead that <span class="math">tan(1.57079633)</span> is really large.)</p>
+          <ul>
+            <li>You can also import the entire math library with the statement <code>import math</code> and then call the same functions with <code>math.tan</code> and <code>math.radians</code>.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Secant">
+        <header>Secant</header>
+        <article>
+          <p>In mathematics, the secant of the variable <var class="math">x</var> would be written as <span class="math">sec(<var>x</var>)</span>. It is written the same whether <var class="math">x</var> is expressed in degrees or in radians. Mathematically, the secant is the reciprocal of the cosine.</p>
+          <p>In Python, the function does not exist, but we can define such a function as the reciprocal of the cosine function, whose <em>argument must always be expressed in radians</em>. To use degrees you can first convert the degree measure into radians using the <code>math</code> package function <code>radians</code>. The following example defines a <code>sec</code> function and then computes and displays various secant values, including some degrees to radians conversions.</p>
+<p>Input:</p>
+<code class="input">from math import cos, radians
+
+def sec(x):
+    return 1 / cos(x)
+
+x = 0.5
+print(f'sec({x}) ≈ {sec(x)}')
+
+for degree_measure in [0, 30, 45, 60, 90]:
+    radian_measure = radians(degree_measure)
+    print(f'sec({degree_measure:>2}<span class="char">°</span>) '
+          f'≈ sec({radian_measure:.8f}) '
+          f'≈ {sec(radian_measure):.8f}')
+</code>
+<p>Output:
+          <code class="output">sec(0.5) ≈ 1.139493927324549
+sec( 0<span class="char">°</span>) ≈ sec(0.00000000) ≈ 1.00000000
+sec(30<span class="char">°</span>) ≈ sec(0.52359878) ≈ 1.15470054
+sec(45<span class="char">°</span>) ≈ sec(0.78539816) ≈ 1.41421356
+sec(60<span class="char">°</span>) ≈ sec(1.04719755) ≈ 2.00000000
+sec(90<span class="char">°</span>) ≈ sec(1.57079633) ≈ 16331239353195370.00000000
+</code>
+          <p>Unlike sine and cosine, the values of the secant function are not bounded (except they cannot be between &minus;1 and 1). You can see the unintended effect of this in the last line of output above. (Also, mathematically <span class="math">sec(90<span class="char">°</span>)</span> is undefined, but using a radian approximation for the angle we see instead that <span class="math">sec(1.57079633)</span> is really large.)</p>
+          <ul>
+            <li>You can also import the entire math library with the statement <code>import math</code> and then call the same functions with <code>math.cos</code> and <code>math.radians</code>.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Cosecant">
+        <header>Cosecant</header>
+        <article>
+          <p>In mathematics, the cosecant of the variable <var class="math">x</var> would be written as <span class="math">csc(<var>x</var>)</span>. It is written the same whether <var class="math">x</var> is expressed in degrees or in radians. Mathematically, the cosecant is the reciprocal of the sine.</p>
+          <p>In Python, the function does not exist, but we can define such a function as the reciprocal of the sine function, whose <em>argument must always be expressed in radians</em>. (To use degrees you can first convert the degree measure into radians using the <code>math</code> package function <code>radians</code>.) There is a bit of an extra complication due to the fact that the rational argument of 0 yields an undefined value. To handle this, we can use the <code>math</code> package floating-point "not a number" (NaN) value <code>nan</code>.</p>
+          <p>The following example defines a <code>csc</code> function and then computes and displays various cosecant values, including some degrees to radians conversions.</p>
+<p>Input:</p>
+<code class="input">from math import sin, radians, nan
+
+def csc(x):
+    if x == 0:
+        return nan
+    return 1 / sin(x)
+
+x = 0.5
+print(f'csc({x}) ≈ {csc(x)}')
+
+for degree_measure in [0, 30, 45, 60, 90]:
+    radian_measure = radians(degree_measure)
+    print(f'csc({degree_measure:>2}<span class="char">°</span>) '
+          f'≈ csc({radian_measure:.8f}) '
+          f'≈ {csc(radian_measure):.8f}')
+</code>
+<p>Output:
+          <code class="output">csc(0.5) ≈ 2.085829642933488
+csc( 0<span class="char">°</span>) ≈ csc(0.00000000) ≈ nan
+csc(30<span class="char">°</span>) ≈ csc(0.52359878) ≈ 2.00000000
+csc(45<span class="char">°</span>) ≈ csc(0.78539816) ≈ 1.41421356
+csc(60<span class="char">°</span>) ≈ csc(1.04719755) ≈ 1.15470054
+csc(90<span class="char">°</span>) ≈ csc(1.57079633) ≈ 1.00000000
+</code>
+          <p>Unlike sine and cosine, the values of the cosecant function are not bounded (except they cannot be between &minus;1 and 1). Also, note the "not a number" <code>nan</code> value printed for <span class="math">csc(0)</span>. It might be best to test for such a value before continuing with a calculation or output.</p>
+          <ul>
+            <li>You can also import the entire math library with the statement <code>import math</code> and then call the same functions with <code>math.sin</code> and <code>math.radians</code>. Also, rather than using <code>math.nan</code>, one could instead use <code>float('NaN')</code> to achieve the same result.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Cotangent">
+        <header>Cotangent</header>
+        <article>
+          <p>In mathematics, the cotangent of the variable <var class="math">x</var> would be written as <span class="math">cot(<var>x</var>)</span>. It is written the same whether <var class="math">x</var> is expressed in degrees or in radians. Mathematically, the cotangent is the reciprocal of the tangent.</p>
+          <p>In Python, the function does not exist, but we can define such a function as the reciprocal of the tangent function, whose <em>argument must always be expressed in radians</em>. (To use degrees you can first convert the degree measure into radians using the <code>math</code> package function <code>radians</code>.) There is a bit of an extra complication due to the fact that the rational argument of 0 yields an undefined value. To handle this, we can use the <code>math</code> package floating-point "not a number" (NaN) value <code>nan</code>.</p>
+          <p>The following example defines a <code>cot</code> function and then computes and displays various cotangent values, including some degrees to radians conversions.</p>
+<p>Input:</p>
+<code class="input">from math import tan, radians, nan
+
+def cot(x):
+    if x == 0:
+        return nan
+    return 1 / tan(x)
+
+x = 0.5
+print(f'cot({x}) ≈ {cot(x)}')
+
+for degree_measure in [0, 30, 45, 60, 90]:
+    radian_measure = radians(degree_measure)
+    print(f'cot({degree_measure:>2}<span class="char">°</span>) '
+          f'≈ cot({radian_measure:.8f}) '
+          f'≈ {cot(radian_measure):.8f}')
+</code>
+<p>Output:
+          <code class="output">cot(0.5) ≈ 1.830487721712452
+cot( 0<span class="char">°</span>) ≈ cot(0.00000000) ≈ nan
+cot(30<span class="char">°</span>) ≈ cot(0.52359878) ≈ 1.73205081
+cot(45<span class="char">°</span>) ≈ cot(0.78539816) ≈ 1.00000000
+cot(60<span class="char">°</span>) ≈ cot(1.04719755) ≈ 0.57735027
+cot(90<span class="char">°</span>) ≈ cot(1.57079633) ≈ 0.00000000
+</code>
+          <p>Unlike sine and cosine, the values of the cotangent function are not bounded. Also, note the "not a number" <code>nan</code> value printed for <span class="math">cot(0)</span>. It might be best to test for such a value before continuing with a calculation or output.</p>
+          <ul>
+            <li>You can also import the entire math library with the statement <code>import math</code> and then call the same functions with <code>math.tan</code> and <code>math.radians</code>. Also, rather than using <code>math.nan</code>, one could instead use <code>float('NaN')</code> to achieve the same result.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

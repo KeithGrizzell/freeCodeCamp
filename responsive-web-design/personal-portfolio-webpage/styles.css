@@ -1,0 +1,201 @@
+@import "https://fonts.googleapis.com/css?family=Carme";
+@import "https://fonts.googleapis.com/css?family=Convergence";
+
+:root {
+  --max-width: 80ch;
+  --base-font-size: 1.25rem;
+  --navbar-padding: 0.5rem;
+  --navbar-height: calc(2 * var(--navbar-padding) + var(--base-font-size));
+  --blue-pantone: #0021a5;
+  --coquelicot: #fa4616;
+  /* --rich-black-fogra-39: #090809; */
+  /* --tufts-blue: #3c91e6; */
+  /* --yellow-green: #9fd356; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Carme, sans-serif;
+  font-size: var(--base-font-size);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: Convergence, sans-serif;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  max-width: 32ch;
+}
+
+h1, .name {
+  color: var(--coquelicot);
+}
+
+span.avoidwrap {
+  display: inline-block;
+}
+
+
+/*
+  NAVBAR
+*/
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: var(--coquelicot);
+}
+
+#navbar > ol {
+  width: 40ch;
+  margin: 0 0;
+  padding: 0 1ch;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5ch 2ch;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+#navbar a:link, #navbar a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+#navbar a:hover {
+  text-decoration: none;
+  color: var(--blue-pantone);
+}
+
+#navbar a:active {
+  text-decoration: none;
+  background-color: var(--blue-pantone);
+  color: var(--coquelicot);
+  
+}
+
+
+/*
+   SECTIONS
+*/
+
+section {
+  padding-top: calc(var(--navbar-height) + 1rem);
+  padding-bottom: calc(var(--navbar-height) + 1rem);
+  min-height: 100vh;
+}
+
+#welcome-section {
+  color: #d7d7d7;
+  background-color: var(--blue-pantone);
+}
+
+#projects {
+  color: #090809;
+  background-color: #9fd356;
+}
+
+#contact-info {
+  color: var(--blue-pantone);
+  background-color: var(--coquelicot);
+}
+
+#welcome-section, #contact-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4vh;
+}
+
+
+/* 
+   PROJECT TILES
+*/
+
+#project-tile-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 2vw;
+  row-gap: 2vh;
+  padding: 1ch;
+}
+
+.project-tile {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 30ch;
+  align-items: center;
+  border: 1px var(--blue-pantone) solid;
+  border-radius: 5%;
+  background-color: #3c91e6;
+  color: white;
+}
+
+.project-tile-image {
+  width: 100%;
+  height: auto;
+  padding: 1ch;
+  object-fit: cover;
+}
+
+.project-tile-caption {
+  padding: 0.75ch 1ch;
+}
+
+
+/*
+  FOOTER
+*/
+
+footer {
+  background-color: #ccc;
+  color: #000;
+}
+
+footer p {
+  font-size: 80%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+footer a#profile-link {
+  color: #000;
+}
+
+
+/*
+  MEDIA QUERIES
+*/
+
+@media only screen and (max-width: 400px) {
+  :root {
+    --navbar-height: calc(2 * var(--navbar-padding) + 3 * var(--base-font-size));
+  }
+  #navbar > ol {
+    flex-flow: column nowrap;
+  }
+  br#break {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <meta charset="UTF-8">
+    <title>Preference Collector</title>
+    <link rel="stylesheet" href="styles.css">
+  </header>
+  <body>
+    <h1 id="title">Preference Collector</h1>
+    <p id="description">Fill out your info and preferences as indicated.</p>
+    <form id="survey-form">
+      <fieldset id="personal-info">
+        <label for="name" id="name-label">Name: <input id="name" type="text" placeholder="First Last" required/></label>
+        <label for="email" id="email-label">Email: <input id="email" type="email" placeholder="Email address" required/></label>
+      </fieldset>
+      <fieldset>
+        <label for="number" id="number-label">Favorite digit (0-9): <input id="number" type="number" min="0" max="9" placeholder="#" /></label>
+        <label for="dropdown">
+          What is your sign? 
+          <select id="dropdown" name="astrological-sign">
+            <option value="0">Select</option>
+            <option value="1">Aries</option>
+            <option value="2">Taurus</option>
+            <option value="3">Gemini</option>
+            <option value="4">Cancer</option>
+            <option value="5">Leo</option>
+            <option value="6">Virgo</option>
+            <option value="7">Libra</option>
+            <option value="8">Scorpio</option>
+            <option value="9">Sagittarius</option>
+            <option value="10">Capricorn</option>
+            <option value="11">Aquarius</option>
+            <option value="12">Pisces</option>
+            <option value="13">Stop</option><!-- a joke! -->
+          </select>
+        </label>
+        <p class="question">In general, do you prefer odd or even numbers?</p>
+        <label for="even">
+          <input class="inline" id="even" name="odd-even" type="radio" value="even" />Even (How odd!)
+        </label>
+        <label for="odd">
+          <input class="inline" id="odd" name="odd-even" type="radio" value="odd" />Odd (Even odder!)
+        </label>
+        <p class="question">What are some other things you like? (Select all that apply.)</p>
+        <label for="dogs"><input class="inline" type="checkbox" name="likes" id="dogs" value="dogs" />dogs</label>
+        <label for="cats"><input class="inline" type="checkbox" name="likes" id="cats" value="cats" />cats</label>
+        <label for="birds"><input class="inline" type="checkbox" name="likes" id="birds" value="birds" />birds</label>
+        <label for="alligators"><input class="inline" type="checkbox" name="likes" id="alligators" value="alligators" />alligators</label>
+        <label for="prime-numbers"><input class="inline" type="checkbox" name="likes" id="prime-numbers" value="prime-numbers" />prime numbers</label>
+        <label for="ice-cream"><input class="inline" type="checkbox" name="likes" id="ice-cream" value="ice-cream" />ice cream</label>
+        <label for="cake"><input class="inline" type="checkbox" name="likes" id="cake" value="cake" />cake</label>
+        <label for="cookies"><input class="inline" type="checkbox" name="likes" id="cookies" value="cookies" />cookies</label>
+        <p class="question">Any other likes you'd like to share?</p>
+        <textarea name="other-likes" placeholder="beaches, movies, long walks off short piers"></textarea>
+      </fieldset>
+      <input type="submit" id="submit" />
+    </form>
+  </body>
+</html>
+

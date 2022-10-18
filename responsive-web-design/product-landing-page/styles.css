@@ -1,0 +1,190 @@
+@import "https://fonts.googleapis.com/css?family=Chivo";
+
+:root {
+  --text-color: #5A49E3;
+  --text-bold-color: #3521D8;
+  --background-color: #EFEFEF;
+  --darker-background-color: #D5D5D5;
+  --highlight-color: #D2E349;
+  --darker-highlight-color: #C4D821;
+  --usable-width: min(80vw, 85ch);
+  --logo-height: 4rem;
+  --logo-width: calc(2 * var(--logo-height));
+  --header-height: var(--logo-height);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+body {
+  font-family: Chivo, sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  width: var(--usable-width);
+  min-width: var(--logo-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+main {
+  position: relative;
+  top: var(--header-height);
+}
+
+section {
+  margin-top: calc(0px - var(--header-height));
+  padding-top: var(--header-height);
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  max-width: var(--usable-width);
+  min-width: var(--logo-width);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#header-img {
+  width: var(--logo-width);
+  height: var(--logo-height);
+  object-fit: cover;
+}
+
+#nav-bar {
+  width: calc(var(--usable-width) - var(--logo-width));
+  margin: 0 auto;
+}
+
+#nav-bar>ol, footer>ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#nav-bar li, footer li {
+  padding: 0 1ch;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--text-bold-color);
+}
+
+h2 {
+  padding: 1rem;
+  color: var(--text-bold-color);
+}
+
+#email {
+  width: min(30ch, 50vw);
+  min-width: var(--logo-width);
+  text-align: left;
+}
+
+.btn {
+  display: block;
+  padding: 1ch;
+  min-width: 13ch;
+  margin: 1.5ch auto 1ch;
+  color: var(--text-bold-color);
+  background-color: var(--highlight-color);
+  border: 1px solid var(--text-bold-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--darker-highlight-color);
+  transition: background-color 0.25s;
+}
+
+.benefits-list li {
+  text-align: left;
+  list-style: disc outside;
+  margin-left: 3ch;
+  padding: 1ch 2ch 1ch 0;
+}
+
+#pricing {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product {
+  align-items: center;
+  max-width: 25ch;
+  margin: 1rem;
+  padding: 0;
+  border: 1px solid var(--text-bold-color);
+}
+
+.product-title {
+  color: var(--bold-text-color);
+  background-color: var(--darker-background-color);
+  font-size: 1.5rem;
+}
+
+.price {
+  color: var(--bold-text-color);
+  font-size: 1.5rem;
+  padding: 1ch;
+}
+
+.features-list li {
+  text-align: left;
+  list-style: none;
+  padding: 1ch 2ch;
+}
+
+#video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1ch auto 2ch;
+}
+
+footer {
+  position: relative;
+  top: var(--header-height);
+  background-color: var(--darker-background-color);
+  width: 100%;
+  padding: 1ch;
+}
+
+#copyright {
+  margin: 1ch 0 0 0;
+}
+
+@media only screen and (max-width: 30ch) {
+  #nav-bar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin: 1ch 0;
+  }
+
+  :root {
+    --header-height: calc(var(--logo-height) + 4.1ch);
+  }
+}
