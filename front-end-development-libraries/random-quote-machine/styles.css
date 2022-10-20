@@ -1,0 +1,50 @@
+/* Main color scheme, to be programmatically changed */
+.color-scheme {
+  color: white !important;
+  background-color: black;
+}
+
+/* Inverse color scheme, to be programmatically changed */
+.color-scheme-inverse {
+  color: black;
+  background-color: white !important;
+}
+
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#quote-box {
+  padding: 3rem 3rem 2rem 3rem;
+  min-width: 30ch;
+  max-width: 60ch;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+}
+
+#text {
+  font-size: 140%;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2ch;
+  padding: 3rem 0 0 0;
+}
+
+.btn {
+  transition: initial;
+}
+
+.btn:hover {
+  color: white !important;
+  opacity: 0.8;
+}
